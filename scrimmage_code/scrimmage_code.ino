@@ -1,5 +1,7 @@
 #include "sensor.h"
 #include "motors.h"
+#include "switch.h"
+#include "other_functions.h"
 
 enum ROBOT_STATE {OFF, DELIVERING, RETURNING};
 
@@ -8,11 +10,14 @@ enum ROBOT_STATE state;
 void setup() {
   state = OFF;
   setup_sensor();
-
+  setup_switch();
+  Serial.begin(9600);
 }
 
 void loop() {
-
+  //Serial.print(state);
+  print_switch();
+  Serial.println();
   // Cycle through state machine
   switch(state) {
 
@@ -32,10 +37,10 @@ void loop() {
     break;
 
     case RETURNING:
-      if (sensor_detected()) {
+      /*if (sensor_detected()) {
         power_down();
         state = OFF;
-      }
+      }*/
     break;
 
   }
