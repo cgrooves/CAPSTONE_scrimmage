@@ -15,8 +15,8 @@ void setup() {
 }
 
 void loop() {
-  //Serial.print(state);
-  print_switch();
+  Serial.print(state);
+  //print_switch();
   Serial.println();
   // Cycle through state machine
   switch(state) {
