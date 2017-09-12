@@ -9,4 +9,6 @@ void setup_sensor();
 // returns a false.
 bool sensor_detected();
 
+void print_sensor();
+
 #endif

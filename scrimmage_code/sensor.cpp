@@ -26,3 +26,8 @@ bool sensor_detected()
   }
 }
 
+void print_sensor()
+{
+  Serial.print(analogRead(analog_pin_sensor));
+}
+
