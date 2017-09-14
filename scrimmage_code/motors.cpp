@@ -1,7 +1,7 @@
 #include "motors.h"
 #include <Arduino.h>
 
-int motor_step_pin = 9;
+int motor_step_pin = 3;
 int motor_dir_pin = 8;
 float base_frequency = 31250; // base PWM frequency for pin 9
 
@@ -12,7 +12,7 @@ void setup_motors() {
 
   // Set the frequency for the pwm to be used on the
   // step pin
-  setPwmFrequency(motor_step_pin, 256);
+  setPwmFrequency(motor_step_pin, 128);
 
   // Set the step and dir pin to LOW initially
   digitalWrite(motor_step_pin,LOW);

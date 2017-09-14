@@ -1,8 +1,8 @@
 #ifndef MOTORS_H
 #define MOTORS_H
 
-#define FORWARD HIGH
-#define BACKWARD LOW
+#define FORWARD LOW
+#define BACKWARD HIGH
 
 // Sets up the pins on the arduino to be used
 // with the motors.

@@ -1,9 +1,9 @@
 #include "sensor.h"
 #import <Arduino.h>
 
-int digital_pin_pd = 2;
+int digital_pin_pd = 12;
 int analog_pin_sensor = 0;
-int limit = 900;
+int limit = 600;
 
 void setup_sensor()
 {
